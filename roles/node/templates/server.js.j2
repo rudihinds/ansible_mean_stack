@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+var express = require('express'),
+  app = express(),
+  port = {{  app_port  }},
+  mongoose = require('mongoose'),
+  Post = require('./api/models/postModel'),
+  bodyParser = require('body-parser');
+
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://{{ appdbuser }}:{{ appdbpass }}@{{ db_host }}/{{ db_name }}');
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json())
+
+var routes = require('./api/routes/routes');
+routes(app)
+
+app.listen(port);
+
+console.log('Application started on: ' + port)

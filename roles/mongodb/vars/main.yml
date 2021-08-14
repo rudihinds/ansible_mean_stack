@@ -1,0 +1,5 @@
+---
+# vars file for mongodb
+appdbuser: nodeuser
+appdbpass: mypass
+dbname: Posts

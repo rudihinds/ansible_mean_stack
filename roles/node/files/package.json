@@ -1,0 +1,12 @@
+{
+    "name": "Ansible-Mean-Stack",
+    "version": "0.0.1",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "^4.15.4",
+        "body-parser": "^1.15.2",
+        "mongoose": "^4.7.2"
+    }
+}
