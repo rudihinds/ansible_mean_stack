@@ -2,12 +2,12 @@
 Description=NodeJS application server
 
 [Service]
-ExecStart={{ appdir }}/server.js
+ExecStart=/opt/app/server.js
 Restart=always
 User=nobody
 Group=nobody
 Environment=PATH=/usr/bin:/usr/local/bin
-WorkingDirectory={{ appdir }}
+WorkingDirectory=/opt/app
 
 [Install]
 WantedBy=multi-user.target
